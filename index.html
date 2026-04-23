@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechLab do Alan</title>
-    <link rel="icon" type="image/png" href="/img/logo-icone.png">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="icon" type="image/png" href="img/logo-icone.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Estilos Base - Paleta: Preto, Verde e Azul Neon */
         * {
@@ -28,7 +30,7 @@
             justify-content: space-around;
             align-items: center;
             padding: 2rem;
-            border-bottom: 1px solid #00f2ff33; /* Linha sutil azul neon */
+            border-bottom: 1px solid #00f2ff33;
         }
 
         .nav-links a {
@@ -48,14 +50,17 @@
 
         .social-icons a {
             color: #00f2ff; /* Azul Neon */
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             margin-left: 15px;
             transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .social-icons a:hover { 
             color: #00ff41; 
-            filter: drop-shadow(0 0 5px #00ff41);
+            filter: drop-shadow(0 0 8px #00ff41);
+            transform: scale(1.1);
         }
 
         /* Hero Section */
@@ -68,7 +73,7 @@
             font-size: 3.5rem;
             margin-bottom: 20px;
             font-weight: 700;
-            color: #00f2ff; /* Título em Azul Neon */
+            color: #00f2ff;
             text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
         }
 
@@ -79,12 +84,11 @@
             max-width: 700px;
         }
 
-        /* Botão com degradê Verde e Azul Neon */
         .btn-gradient {
             background: linear-gradient(90deg, #00ff41, #00f2ff);
             color: #000;
             padding: 14px 35px;
-            border-radius: 5px; /* Estilo mais retangular/tech */
+            border-radius: 5px;
             border: none;
             cursor: pointer;
             font-weight: bold;
@@ -99,12 +103,12 @@
             box-shadow: 0 0 25px rgba(0, 242, 255, 0.5);
         }
 
-        /* Projetos 2x2 */
+        /* Projetos */
         .projects-section { padding: 60px 15%; }
         .projects-section h2 { 
             font-size: 2.5rem; 
             margin-bottom: 50px; 
-            color: #00ff41; /* Subtítulo Verde */
+            color: #00ff41;
         }
 
         .project-grid {
@@ -136,7 +140,11 @@
             border: 1px solid #222;
         }
 
-        .project-img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .project-img-box img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
 
         /* Tecnologias */
         .tech-section { padding: 60px 15%; }
@@ -156,29 +164,21 @@
             font-weight: bold;
         }
 
-        /* Sobre Mim - Timeline Horizontal */
+        /* Sobre Mim */
         .about-section { padding: 100px 15%; }
-        .timeline {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 60px;
-            position: relative;
+        .timeline-item { 
+            position: relative; 
+            padding-left: 30px; 
+            border-left: 2px solid #00ff41;
         }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 10px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #00ff41, #00f2ff);
-        }
-        .timeline-item { position: relative; z-index: 2; width: 100%; }
         .dot { 
             width: 15px; 
             height: 15px; 
             background-color: #00ff41; 
             border-radius: 50%; 
-            margin-bottom: 20px;
+            position: absolute;
+            left: -9px;
+            top: 5px;
             box-shadow: 0 0 10px #00ff41;
         }
 
@@ -194,8 +194,7 @@
 
         @media (max-width: 768px) {
             .project-grid { grid-template-columns: 1fr; }
-            .timeline { flex-direction: column; gap: 40px; }
-            .timeline::before { display: none; }
+            footer { flex-direction: column; text-align: center; gap: 20px; }
         }
     </style>
 </head>
@@ -208,7 +207,7 @@
             <a href="#about">Sobre mim</a>
         </div>
         <div class="social-icons">
-            <a href="http://github.com/Alan2980" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Alan2980" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/alan-carlos-ferreira/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </nav>
@@ -219,7 +218,6 @@
         <a href="#about" class="btn-gradient">Saber mais</a>
     </header>
 
-   
     <section class="tech-section" id="tech">
         <h2>Tecnologias</h2>
         <div class="tech-grid">
@@ -230,15 +228,16 @@
             <div class="tech-badge">Git & GitHub</div>
         </div>
     </section>
-  <section class="projects-section" id="projects">
+
+    <section class="projects-section" id="projects">
         <h2>Projetos</h2>
         <div class="project-grid">
             <div class="project-card">
                 <div class="project-img-box">
-                    <img src="/img/DEVFLix.png" alt="Devflix">
+                    <img src="img/DEVFLix.png" alt="Devflix">
                 </div>
                 <h3>Devflix</h3>
-                <p>É um layout de streaming adaptado para conteúdo educacional de programação, especialmente front-end, com foco em UX simples e destaque para o conteúdo principal.</p>
+                <p>Layout de streaming adaptado para conteúdo educacional de programação.</p>
                 <a href="https://basenacbr-my.sharepoint.com/:u:/g/personal/alan48354706_aluno_ba_senac_br/IQDGTTc9isylQrXAjAo8nd3AAR1FOP3xjFwxN7W-RszJwBE?e=UercpC" target="_blank">
                     <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
                 </a>
@@ -246,44 +245,33 @@
 
             <div class="project-card">
                 <div class="project-img-box">
-                    <img src="/img/EducaNet.png" alt="EducaNet">
+                    <img src="img/EducaNet.png" alt="EducaNet">
                 </div>
                 <h3>EducaNet</h3>
-                <p>A imagem representa um protótipo completo de sistema educacional ou plataforma de aprendizado, com fluxo bem definido desde login até consumo de conteúdo e interação com exercícios.</p>
-                <a href="https://www.figma.com/proto/KBrJU5p9wS079ucvSFIwqR/EducaF%C3%A1cil?node-id=58-42&t=xCgRSGFQoG0p897k-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A222" target="_blank">
+                <p>Protótipo completo de sistema educacional ou plataforma de aprendizado.</p>
+                <a href="https://www.figma.com/proto/KBrJU5p9wS079ucvSFIwqR/EducaF%C3%A1cil?node-id=58-42" target="_blank">
                     <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
                 </a>
             </div>
 
             <div class="project-card">
                 <div class="project-img-box">
-                    <img src="/img/Projeto Figma.png" alt="Figma">
+                    <img src="img/Projeto Figma.png" alt="Figma">
                 </div>
                 <h3>Projeto Figma</h3>
-                <p>A imagem representa um portfólio de desenvolvedor com estilo tecnológico, minimalista e profissional, destacando suas habilidades, projetos e aprendizado de forma visual e criativa. </p>
-                <a href="https://www.figma.com/make/4gsi7QHn8DCEv77UlmLsKq/Futuristic-Portfolio-Website?fullscreen=1&t=gJldXSZ5ho7Ov596-1" target="_blank">
+                <p>Portfólio com estilo tecnológico e profissional.</p>
+                <a href="https://www.figma.com/make/4gsi7QHn8DCEv77UlmLsKq/Futuristic-Portfolio-Website" target="_blank">
                     <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
                 </a>
             </div>
 
             <div class="project-card">
                 <div class="project-img-box">
-                    <img src="/img/Sabor Digital.png" alt="Sabor Digital">
+                    <img src="img/Sabor Digital.png" alt="Sabor Digital">
                 </div>
                 <h3>Sabor Digital</h3>
                 <p>É um layout de cardápio digital moderno, pensado para facilitar pedidos online, com foco em clareza, apresentação visual dos pratos e ação rápida do usuário.</p>
                 <a href="https://basenacbr-my.sharepoint.com/:u:/g/personal/alan48354706_aluno_ba_senac_br/IQDV8xX7fhvfSLwlhzkRFEE5Abi_323sx8X1kUDSmn3OrMc?e=D5rLdQ" target="_blank">
-                    <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
-                </a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="/img/hero.png" alt="Hero">
-                </div>
-                <h3>Hero</h3>
-                <p>Esta imagem apresenta uma interface de seleção de personagem para um jogo com temática futurista ou ciberpunk.</p>
-                <a href="https://github.com/Alan2980/hero.git" target="_blank">
                     <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
                 </a>
             </div>
@@ -292,28 +280,30 @@
 
     <section class="about-section" id="about">
         <h2>Sobre mim</h2><br>
-       
-            <div class="timeline-item">
-                <div class="dot"></div>
-                <h4>2025</h4>
-                <p>
+        <div class="timeline-item">
+            <div class="dot"></div>
+            <h4>2025</h4>
+            <p>
                     <strong>Sou um desenvolvedor apaixonado por tecnologia, sempre aprendendo coisas novas <br>
                          Comecei com Arduino e agora estou explorando o <br>
                          desenvolvimento web.</strong>
                 </p>
-                <p style="margin-top: 15px;">
-                    → Projetos práticos que resolvem problemas<br>
-                    → Aprender fazendo e compartilhar<br>
-                    → Testando novas tecnologias e ideias
-                </p>
-            </div>
+            <p style="margin-top: 15px;">
+                → Projetos que resolvem problemas<br>
+                → Aprendizado contínuo<br>
+                → Novas tecnologias e ideias
+            </p>
         </div>
     </section>
 
     <footer>
         <div>
-            <p>contato: <span style="color: #00f2ff;">75 99194-6990</span></p>
+            <p>Contato: <span style="color: #00f2ff;">75 99194-6990</span></p>
             <p>Email: <span style="color: #00ff41;">alancarlosdasilva@gmail.com</span></p>
+        </div>
+        <div class="social-icons">
+            <a href="https://github.com/Alan2980" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alan-carlos-ferreira/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </footer>
 
