@@ -3,307 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechLab do Alan</title>
+    <title>TechLab do Alan | Desenvolvedor Web</title>
     
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo-icone.png">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Estilos Base - Paleta: Preto, Verde e Azul Neon */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: #000000; /* Preto total */
-            color: #ffffff;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* Navbar */
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 2rem;
-            border-bottom: 1px solid #00f2ff33;
-        }
-
-        .nav-links a {
-            margin: 0 15px;
-            color: #00ff41; /* Verde Neon */
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover { 
-            color: #00f2ff; /* Azul Neon no hover */
-            text-shadow: 0 0 10px #00f2ff;
-        }
-
-        .social-icons a {
-            color: #00f2ff; /* Azul Neon */
-            font-size: 1.6rem;
-            margin-left: 15px;
-            transition: 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .social-icons a:hover { 
-            color: #00ff41; 
-            filter: drop-shadow(0 0 8px #00ff41);
-            transform: scale(1.1);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 100px 15%;
-            max-width: 1000px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            color: #00f2ff;
-            text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
-        }
-
-        .hero p {
-            color: #94a3b8;
-            margin-bottom: 35px;
-            font-size: 1.2rem;
-            max-width: 700px;
-        }
-
-        .btn-gradient {
-            background: linear-gradient(90deg, #00ff41, #00f2ff);
-            color: #000;
-            padding: 14px 35px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
-            box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
-        }
-
-        .btn-gradient:hover { 
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(0, 242, 255, 0.5);
-        }
-
-        /* Projetos */
-        .projects-section { padding: 60px 15%; }
-        .projects-section h2 { 
-            font-size: 2.5rem; 
-            margin-bottom: 50px; 
-            color: #00ff41;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .project-card {
-            background-color: #0a0a0a;
-            border: 1px solid #00f2ff33;
-            border-radius: 10px;
-            padding: 30px;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            border-color: #00ff41;
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
-        }
-
-        .project-img-box {
-            width: 100%;
-            height: 200px;
-            background-color: #111;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            border: 1px solid #222;
-        }
-
-        .project-img-box img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-        }
-
-        /* Tecnologias */
-        .tech-section { padding: 60px 15%; }
-        .tech-grid {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        .tech-badge {
-            background: #000;
-            color: #00f2ff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: 1px solid #00f2ff;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-
-        /* Sobre Mim */
-        .about-section { padding: 100px 15%; }
-        .timeline-item { 
-            position: relative; 
-            padding-left: 30px; 
-            border-left: 2px solid #00ff41;
-        }
-        .dot { 
-            width: 15px; 
-            height: 15px; 
-            background-color: #00ff41; 
-            border-radius: 50%; 
-            position: absolute;
-            left: -9px;
-            top: 5px;
-            box-shadow: 0 0 10px #00ff41;
-        }
-
-        /* Footer */
-        footer {
-            padding: 60px 15%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #050505;
-            border-top: 1px solid #00ff4133;
-        }
-
-        @media (max-width: 768px) {
-            .project-grid { grid-template-columns: 1fr; }
-            footer { flex-direction: column; text-align: center; gap: 20px; }
-        }
-    </style>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Estilo Externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Navbar -->
     <nav>
+        <a href="#" class="brand">
+            <img src="img/logo-icone.png" alt="TechLab Logo" class="brand-logo">
+            TechLab<span>.</span>
+        </a>
+
         <div class="nav-links">
             <a href="#projects">Projetos</a>
             <a href="#tech">Tecnologias</a>
             <a href="#about">Sobre mim</a>
+            <a href="#contact">Contato</a>
         </div>
+
         <div class="social-icons">
-            <a href="https://github.com/Alan2980" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/alan-carlos-ferreira/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Alan2980" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Alan Carlos">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alan-carlos-ferreira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Alan Carlos">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <h1>Olá, eu sou Alan Carlos Desenvolvedor</h1>
-        <p>Desenvolvedor focado em transformar ideias em código. Especializado em criar interfaces modernas e soluções funcionais no meu laboratório de tecnologia.</p>
-        <a href="#about" class="btn-gradient">Saber mais</a>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> Disponível para novos projetos
+            </div>
+            <h1>Olá, eu sou Alan Carlos <span class="highlight">Desenvolvedor</span></h1>
+            <p>Focado em transformar ideias em código eficiente. Especializado em interfaces modernas, design tecnológico e soluções funcionais desenvolvidas no meu laboratório de inovação.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-gradient">Ver Projetos <i class="fas fa-arrow-down"></i></a>
+                <a href="https://wa.me/5575991946990" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                    <i class="fab fa-whatsapp"></i> Falar Comigo
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <img src="img/hero.png" alt="Alan Carlos - TechLab" class="hero-img">
+        </div>
     </header>
 
+    <!-- Tecnologias -->
     <section class="tech-section" id="tech">
-        <h2>Tecnologias</h2>
+        <h2 class="section-title">Tecnologias</h2>
         <div class="tech-grid">
-            <div class="tech-badge">HTML</div>
-            <div class="tech-badge">CSS (Flexbox/Grid)</div>
-            <div class="tech-badge">JavaScript</div>
-            <div class="tech-badge">Arduino</div>
-            <div class="tech-badge">Git & GitHub</div>
+            <div class="tech-badge"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="tech-badge"><i class="fab fa-css3-alt"></i> CSS3 (Flexbox/Grid)</div>
+            <div class="tech-badge"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="tech-badge"><i class="fas fa-microchip"></i> Arduino & Hardware</div>
+            <div class="tech-badge"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+            <div class="tech-badge"><i class="fab fa-figma"></i> Figma (UI/UX)</div>
         </div>
     </section>
 
+    <!-- Projetos -->
     <section class="projects-section" id="projects">
-        <h2>Projetos</h2>
+        <h2 class="section-title">Projetos em Destaque</h2>
         <div class="project-grid">
+            
+            <!-- Devflix -->
             <div class="project-card">
                 <div class="project-img-box">
-                    <img src="img/DEVFLix.png" alt="Devflix">
+                    <img src="img/DEVFLix.png" alt="Projeto Devflix">
                 </div>
                 <h3>Devflix</h3>
-                <p>Layout de streaming adaptado para conteúdo educacional de programação.</p>
-                <a href="https://basenacbr-my.sharepoint.com/:u:/g/personal/alan48354706_aluno_ba_senac_br/IQDGTTc9isylQrXAjAo8nd3AAR1FOP3xjFwxN7W-RszJwBE?e=UercpC" target="_blank">
-                    <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
-                </a>
+                <p>Layout inspirado nas maiores plataformas de streaming, adaptado especificamente para cursos e trilhas educacionais de programação.</p>
+                <div class="project-footer">
+                    <a href="https://basenacbr-my.sharepoint.com/:u:/g/personal/alan48354706_aluno_ba_senac_br/IQDGTTc9isylQrXAjAo8nd3AAR1FOP3xjFwxN7W-RszJwBE?e=UercpC" target="_blank" rel="noopener noreferrer" class="btn-gradient btn-sm">
+                        Ver mais <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
             </div>
 
+            <!-- EducaNet -->
             <div class="project-card">
                 <div class="project-img-box">
-                    <img src="img/EducaNet.png" alt="EducaNet">
+                    <img src="img/EducaNet.png" alt="Projeto EducaNet">
                 </div>
                 <h3>EducaNet</h3>
-                <p>Protótipo completo de sistema educacional ou plataforma de aprendizado.</p>
-                <a href="https://www.figma.com/proto/KBrJU5p9wS079ucvSFIwqR/EducaF%C3%A1cil?node-id=58-42" target="_blank">
-                    <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
-                </a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="img/Projeto Figma.png" alt="Figma">
+                <p>Protótipo completo de sistema educacional e plataforma de aprendizagem online com foco em facilidade de uso e navegação intuitiva.</p>
+                <div class="project-footer">
+                    <a href="https://www.figma.com/proto/KBrJU5p9wS079ucvSFIwqR/EducaF%C3%A1cil?node-id=58-42" target="_blank" rel="noopener noreferrer" class="btn-gradient btn-sm">
+                        Ver mais <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                <h3>Projeto Figma</h3>
-                <p>Portfólio com estilo tecnológico e profissional.</p>
-                <a href="https://www.figma.com/make/4gsi7QHn8DCEv77UlmLsKq/Futuristic-Portfolio-Website" target="_blank">
-                    <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
-                </a>
             </div>
 
+            <!-- Futurist Portfolio -->
             <div class="project-card">
                 <div class="project-img-box">
-                    <img src="img/Sabor Digital.png" alt="Sabor Digital">
+                    <img src="img/Projeto Figma.png" alt="Projeto Figma Futurista">
+                </div>
+                <h3>Design Portfólio Futurista</h3>
+                <p>Estrutura visual completa e estilização de website desenvolvida no Figma, explorando tipografia moderna, contraste neon e estética tech.</p>
+                <div class="project-footer">
+                    <a href="https://www.figma.com/make/4gsi7QHn8DCEv77UlmLsKq/Futuristic-Portfolio-Website" target="_blank" rel="noopener noreferrer" class="btn-gradient btn-sm">
+                        Ver mais <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sabor Digital -->
+            <div class="project-card">
+                <div class="project-img-box">
+                    <img src="img/Sabor Digital.png" alt="Projeto Sabor Digital">
                 </div>
                 <h3>Sabor Digital</h3>
-                <p>É um layout de cardápio digital moderno, pensado para facilitar pedidos online, com foco em clareza, apresentação visual dos pratos e ação rápida do usuário.</p>
-                <a href="https://basenacbr-my.sharepoint.com/:u:/g/personal/alan48354706_aluno_ba_senac_br/IQDV8xX7fhvfSLwlhzkRFEE5Abi_323sx8X1kUDSmn3OrMc?e=D5rLdQ" target="_blank">
-                    <button class="btn-gradient" style="padding: 8px 20px; font-size: 0.8rem;">Ver mais</button>
-                </a>
+                <p>Layout de cardápio digital moderno projetado para otimizar pedidos online, com apresentação visual atrativa dos pratos e conversão rápida.</p>
+                <div class="project-footer">
+                    <a href="https://basenacbr-my.sharepoint.com/:u:/g/personal/alan48354706_aluno_ba_senac_br/IQDV8xX7fhvfSLwlhzkRFEE5Abi_323sx8X1kUDSmn3OrMc?e=D5rLdQ" target="_blank" rel="noopener noreferrer" class="btn-gradient btn-sm">
+                        Ver mais <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section class="about-section" id="about">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-content">
+            <div class="timeline-item">
+                <div class="dot"></div>
+                <div class="timeline-year">Minha Trajetória</div>
+                <p class="about-text">
+                    Sou um desenvolvedor apaixonado por tecnologia e resolução de problemas práticos. 
+                    Iniciei minha jornada trabalhando com automação e projetos em <strong>Arduino</strong> e hoje concentro minha dedicação no 
+                    <strong>desenvolvimento web moderno</strong>, criando experiências completas, responsivas e visualmente marcantes.
+                </p>
+                <ul class="about-highlights">
+                    <li><i class="fas fa-check-circle"></i> Projetos focados em solucionar necessidades reais</li>
+                    <li><i class="fas fa-check-circle"></i> Aprendizado e evolução contínua em código e boas práticas</li>
+                    <li><i class="fas fa-check-circle"></i> Integração entre hardware (IoT/Arduino) e interfaces web</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section class="about-section" id="about">
-        <h2>Sobre mim</h2><br>
-        <div class="timeline-item">
-            <div class="dot"></div>
-            <h4>2025</h4>
-            <p>
-                    <strong>Sou um desenvolvedor apaixonado por tecnologia, sempre aprendendo coisas novas <br>
-                         Comecei com Arduino e agora estou explorando o <br>
-                         desenvolvimento web.</strong>
-                </p>
-            <p style="margin-top: 15px;">
-                → Projetos que resolvem problemas<br>
-                → Aprendizado contínuo<br>
-                → Novas tecnologias e ideias
+    <!-- Rodapé / Contato -->
+    <footer id="contact">
+        <div class="footer-contact">
+            <h4>Entre em Contato</h4>
+            <p>WhatsApp: 
+                <a href="https://wa.me/5575991946990" target="_blank" rel="noopener noreferrer" class="contact-phone">
+                    <i class="fab fa-whatsapp"></i> (75) 99194-6990
+                </a>
+            </p>
+            <p>E-mail: 
+                <a href="mailto:alancarlosdasilva@gmail.com" class="contact-email">
+                    <i class="fas fa-envelope"></i> alancarlosdasilva@gmail.com
+                </a>
             </p>
         </div>
-    </section>
 
-    <footer>
-        <div>
-            <p>Contato: <span style="color: #00f2ff;">75 99194-6990</span></p>
-            <p>Email: <span style="color: #00ff41;">alancarlosdasilva@gmail.com</span></p>
+        <div class="footer-social">
+            <div class="social-icons">
+                <a href="https://github.com/Alan2980" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/alan-carlos-ferreira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
         </div>
-        <div class="social-icons">
-            <a href="https://github.com/Alan2980" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/alan-carlos-ferreira/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+        <div class="footer-copy">
+            &copy; 2026 TechLab do Alan. Desenvolvido com foco em alta performance e design tech.
         </div>
     </footer>
 
